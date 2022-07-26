@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+mlflow = "*"
+scikit-learn = "*"
+pandas = "*"
+
+[dev-packages]
+pylint = "*"
+pre-commit = "*"
+pytest = "*"
+
+[requires]
+python_version = "3.7"
