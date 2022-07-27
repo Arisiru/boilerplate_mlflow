@@ -3,9 +3,10 @@ name: mlflow_project_boilerplate
 conda_env: conda.yaml
 
 entry_points:
-  main:
+  train:
     parameters:
       alpha: {type: float, default: 0.5}
       l1_ratio: {type: float, default: 0.1}
       data: {type: string, default: "data/wine-quality.csv"}
     command: "python train.py {alpha} {l1_ratio} {data}"
+
