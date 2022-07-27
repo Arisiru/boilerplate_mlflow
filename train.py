@@ -69,7 +69,7 @@ def main():
     # >>>>>>>>> MLFLOW
     # set mlFlow destination from MLFLOW_TRACKING_URI in the env
     # mlflow.set_tracking_uri(REMOTE_SERVER_URI)
-    # print(f"TRACKING URL: {mlflow.tracking.get_tracking_uri()}")
+    print(f"TRACKING URL: {mlflow.tracking.get_tracking_uri()}")
 
     # set an experiment tag
     mlflow.set_experiment(EXPERIMENT_TAG)
