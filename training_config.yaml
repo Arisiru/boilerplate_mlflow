@@ -1,0 +1,10 @@
+hyperparameters:      
+  alpha: 0.5
+  l1_ratio: 0.1
+  seed: 42
+data_file: "data/wine-quality.csv"
+run:
+  random_seed: 40
+  experiment:
+    id: "boilerplate_mlflow_name"
+  

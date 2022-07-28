@@ -5,9 +5,7 @@ conda_env: conda.yaml
 entry_points:
   training:
     parameters:
-      alpha: {type: float, default: 0.5}
-      l1_ratio: {type: float, default: 0.1}
-      data: {type: string, default: "data/wine-quality.csv"}
-    command: "python train.py {alpha} {l1_ratio} {data}"
+      config_file: {type: string}
+    command: "python entry_training.py {alpha} {l1_ratio} {data}"
   inference:
-    command: "python infer.py"
+    command: "python entry_inference.py"
