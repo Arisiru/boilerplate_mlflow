@@ -11,7 +11,9 @@ pandas = "*"
 [dev-packages]
 pylint = "*"
 pre-commit = "*"
+notebook = "*"
 pytest = "*"
+ipykernel = "*"
 
 [requires]
 python_version = "3.7"
