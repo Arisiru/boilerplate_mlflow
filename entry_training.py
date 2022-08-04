@@ -44,6 +44,7 @@ def main():
 
     # scope for mlFlow run
     with mlflow.start_run():
+        # log params as dictionary
         mlflow.log_params(training_config["hyperparameters"])
 
         train_xs, train_ys, test_xs, test_ys = dataset.prepare(
@@ -65,7 +66,7 @@ def main():
         print(f"  MAE: {mae}")
         print(f"  R2: {r_2}")
 
-        # log prameters and metrics to the mlFlow
+        # log metrics to the mlFlow
         mlflow.log_metric("rmse", rmse)
         mlflow.log_metric("r2", r_2)
         mlflow.log_metric("mae", mae)

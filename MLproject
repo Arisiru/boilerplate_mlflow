@@ -6,6 +6,6 @@ entry_points:
   training:
     parameters:
       config_file: {type: string}
-    command: "python entry_training.py {alpha} {l1_ratio} {data}"
+    command: "python entry_training.py {config_file}"
   inference:
     command: "python entry_inference.py"
