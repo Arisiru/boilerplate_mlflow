@@ -57,6 +57,10 @@ def main():
 
         rmse, mae, r_2 = modelfactory.eval_metrics(model, test_xs, test_ys)
 
+        # rmse: root of mean square error 0 is perfect
+        #  mae: mead absolute error 0 is perfect
+        #  r_2: regression function 1 is perfect -inf is worst
+
         print(
             f"Elasticnet model \
             (alpha={training_config['hyperparameters']['alpha']}, \
@@ -76,7 +80,7 @@ def main():
 
         # Dependse on mlFlow store deside to use Model registry.
         # Model registry does not work with file store
-        if tracking_url_type_store != "file":
+        if tracking_url_type_store == "file":
             # Register the model
             # There are other ways to use the Model Registry, which depends on the use case,
             # please refer to the doc for more information:
