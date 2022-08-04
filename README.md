@@ -20,6 +20,18 @@ Make sure you have `pipenv` installed. Please follow the [Pienv documentation](h
 - run `python entry_training.py` to run a training
 - run `mlflow ui` to confirm that a run was tracked by mlflow
 
+### DVC
+
+For model and experiment data sets' version control please follow [DVC documentation](https://dvc.org/).
+If you followed the pipenv section the dvc should be part of your virtual environment.
+Please pull data from storage `$ dvc pull`
+
+When you're pulling data for very first time you need to authorize access, follow recomendation from Google drive and use generated token to authorize access.
+
+Access to the data storage is read for all, don't try to push anything to the data repo.
+
+Use dvc commands to commit, push, pull changes to data and models
+
 ### Git hooks (optional)
 
 **Pay attention** this step is optional but strongly suggested, as it make sure that linter is applyed
