@@ -7,6 +7,7 @@ name = "pypi"
 mlflow = "*"
 scikit-learn = "*"
 pandas = "*"
+dvc = {extras = ["gdrive"], version = "*"}
 
 [dev-packages]
 pylint = "*"
